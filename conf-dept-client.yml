@@ -1,10 +1,10 @@
-spring:
-  profiles:
-   active:
+spring: 
+  profiles: 
+   active: 
     - dev
----
-server:
-  port: 8001
+---   
+server: 
+  port: 8001 
 spring:
   profiles: dev  #开发环境
   application:
@@ -32,16 +32,16 @@ eureka:
      #配置将8001发布到3台Eureka集群配置中
     defaultZone: http://eureka7001.com:7001/eureka/
     #instance-id: microserivcecloud-dept8001   #自定义服务名称信息
-    instance-id: microserivce-dept8001-hystrix   #自定义服务名称信息,表示是一个熔断器的微服务
-    prefer-ip-address: true     #访问路径显示IP地址
+    instance-id: microserivcecloud-dept8001-hystrix   #自定义服务名称信息,表示是一个熔断器的微服务
+    prefer-ip-address: true     #访问路径显示IP地址  
 info:     #追加微服务信息的描述
   app.name: microserivce-dept   #工程名称
   company.name: www.service.com    #公司名称
   bulid.artifactId: $project.artifactId$  #灵活的调用在父工程有配置build
-  build.version: $project.version$
+  build.version: $project.version$       
 ---
-server:
-  port: 8002
+server: 
+  port: 8002 
 spring:
   profiles: dev  #开发环境
   application:
@@ -69,10 +69,10 @@ eureka:
      #配置将8001发布到3台Eureka集群配置中
     defaultZone: http://eureka7001.com:7001/eureka/
     #instance-id: microserivcecloud-dept8001   #自定义服务名称信息
-    instance-id: microserivce-dept8001-hystrix   #自定义服务名称信息,表示是一个熔断器的微服务
-    prefer-ip-address: true     #访问路径显示IP地址
+    instance-id: microserivcecloud-dept8001-hystrix   #自定义服务名称信息,表示是一个熔断器的微服务
+    prefer-ip-address: true     #访问路径显示IP地址  
 info:     #追加微服务信息的描述
   app.name: microserivce-dept   #工程名称
   company.name: www.service.com    #公司名称
   bulid.artifactId: $project.artifactId$  #灵活的调用在父工程有配置build
-  build.version: $project.version$
+  build.version: $project.version$    
